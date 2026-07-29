@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <arg name="map" value="empty_map"/>
+
+    <node pkg="map_server" type="map_server" name="map_server" output="screen" args="$(find move_base_nav)/config/maps/$(arg map).yaml">
+        <param name="frame_id" value="map"/> <!-- changed this from odom to map -->
+    </node>
+
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <remap from="cmd_vel" to="/tu_delft_base_control/cmd_vel"/>
+        <remap from="odom" to="/tu_delft_base_control/odom"/>
+
+        <param name="base_global_planner" value="navfn/NavfnROS"/>
+        <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
+
+        <!-- Local Costmap params -->
+        <rosparam file="$(find move_base_nav)/config/costmaps/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+        <rosparam file="$(find move_base_nav)/config/costmaps/local_costmap_params.yaml" command="load"/>
+
+        <!-- Global Costmap params -->   	
+        <rosparam file="$(find move_base_nav)/config/costmaps/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+        <rosparam file="$(find move_base_nav)/config/costmaps/global_costmap_params.yaml" command="load"/>
+
+        <rosparam file="$(find move_base_nav)/config/planners/dwa_params.yaml" command="load"/>
+        <rosparam file="$(find move_base_nav)/config/planners/navfn_params.yaml" command="load"/>
+    </node>
+
+</launch>

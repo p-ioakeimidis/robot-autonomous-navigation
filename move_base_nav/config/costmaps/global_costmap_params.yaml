@@ -1,0 +1,11 @@
+global_costmap:
+  global_frame: map #odom
+  robot_base_frame: base_footprint #base_link
+  rolling_window: false
+  static_map: true
+  resolution: 0.1
+  
+  plugins:
+    - {name: map_layer, type: "costmap_2d::StaticLayer"}
+    - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}

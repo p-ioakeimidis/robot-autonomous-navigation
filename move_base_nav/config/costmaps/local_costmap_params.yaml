@@ -1,0 +1,17 @@
+local_costmap:
+  global_frame: map
+  robot_base_frame: base_footprint #base_link
+  rolling_window: true
+  static_map: false
+  resolution: 0.1
+  width: 10.0
+  height: 10.0
+
+  plugins:
+  # - {name: map_layer, type: "costmap_2d::StaticLayer"}
+  # - {name: traversability_layer, type: "grid_map_costmap_2d::GridMapLayer"}
+  # - {name: traversability_layer, type: "costmap_2d::StaticLayer"}
+  - {name: traversability_layer, type: "costmap_2d::StaticLayer"}
+  - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+  # - {name: traversability_layer, type: "costmap_2d::StaticLayer"}
+  - {name: inflation_layer, type: "costmap_2d::InflationLayer"}

@@ -1,7 +1,8 @@
 # ROS1 Noetic Autonomous Navigation Stack (EKF + Path Planning)
 
 This project implements a complete **autonomous navigation system** for a **differential drive mobile robot** using ROS1 Noetic. It extends a previously developed **EKF-based localization system** and adds global and local path planning capabilities using the ROS Navigation Stack.
-<img width="800" height="588" alt="path_following" src="https://github.com/user-attachments/assets/e245e38b-6359-4573-b099-3c2687b58b78" />
+
+<img width="600" height="388" alt="path_following" src="https://github.com/user-attachments/assets/e245e38b-6359-4573-b099-3c2687b58b78" />
 
 ---
 

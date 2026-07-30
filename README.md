@@ -101,9 +101,9 @@ Clone both repositories into the same catkin workspace:
 ```bash id="kq9x2a"
 cd ~/catkin_ws/src
 
-git clone https://github.com/p-ioakeimidis/ros1-noetic-slam.git
+git clone https://github.com/p-ioakeimidis/robot-ekf-localization.git
 
-git clone https://github.com/YOUR_USERNAME/ros1-noetic-path-planning.git
+git clone https://github.com/p-ioakeimidis/robot-autonomous-navigation.git
 ```
 
 ---

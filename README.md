@@ -138,7 +138,7 @@ roslaunch global_localization global_ekf.launch
 ### 3. Start navigation stack
 
 ```bash id="x7w9cp"
-roslaunch move_base_nav move_base.launch
+roslaunch move_base_nav move_base_nav.launch
 ```
 
 ---

@@ -1,5 +1,5 @@
 global_costmap:
-  global_frame: map #odom
+  global_frame: odom #odom
   robot_base_frame: base_footprint #base_link
   rolling_window: false
   static_map: true

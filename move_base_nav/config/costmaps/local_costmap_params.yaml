@@ -1,5 +1,5 @@
 local_costmap:
-  global_frame: map
+  global_frame: odom
   robot_base_frame: base_footprint #base_link
   rolling_window: true
   static_map: false
@@ -11,7 +11,7 @@ local_costmap:
   # - {name: map_layer, type: "costmap_2d::StaticLayer"}
   # - {name: traversability_layer, type: "grid_map_costmap_2d::GridMapLayer"}
   # - {name: traversability_layer, type: "costmap_2d::StaticLayer"}
-  - {name: traversability_layer, type: "costmap_2d::StaticLayer"}
+  # - {name: traversability_layer, type: "costmap_2d::StaticLayer"}
   - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
   # - {name: traversability_layer, type: "costmap_2d::StaticLayer"}
   - {name: inflation_layer, type: "costmap_2d::InflationLayer"}

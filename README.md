@@ -37,7 +37,7 @@ The system combines:
 ```text id="wq3k9p"
 Sensor Data + Odometry
         ↓
-   EKF Localization (ros1-noetic-slam)
+   EKF Localization
         ↓
    map → odom → base_link TF
         ↓
@@ -125,7 +125,7 @@ source devel/setup.bash
 ### 1. Start Gazebo + robot
 
 ```bash id="r9k2mz"
-roslaunch first_robot gazebo.launch
+roslaunch first_robot sim.launch
 ```
 
 ### 2. Start EKF localization (from localization repo)
@@ -138,7 +138,7 @@ roslaunch global_localization global_ekf.launch
 ### 3. Start navigation stack
 
 ```bash id="x7w9cp"
-roslaunch move_base_launch move_base.launch
+roslaunch move_base_nav move_base.launch
 ```
 
 ---

@@ -12,7 +12,7 @@ This project is designed to run inside a single ROS catkin workspace:
 
 ```text id="a1q8x7"
 ~/catkin_ws/src/
-├── robot-ekf-ocalization/     # EKF localization system (existing repo)
+├── robot-ekf-localization/     # EKF localization system (existing repo)
 ├── robot-autonomous-navigation/    # THIS repository (navigation stack)
 ```
 
